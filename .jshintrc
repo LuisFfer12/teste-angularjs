@@ -1,14 +1,13 @@
 {
   "strict": "global",
   "globals": {
-    // AngularJS
+
     "angular": false,
 
-    // AngularJS mocks
+
     "module": false,
     "inject": false,
 
-    // Jasmine
     "jasmine": false,
     "describe": false,
     "beforeEach": false,
@@ -16,7 +15,7 @@
     "it": false,
     "expect": false,
 
-    // Protractor
+
     "browser": false,
     "element": false,
     "by": false
