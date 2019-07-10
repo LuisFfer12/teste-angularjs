@@ -1,0 +1,22 @@
+<table class="table table-striped table-hover table-responsive">
+    <a class="btn btn-primary" href="/#!/view2">Adicionar nova Pessoa</a>
+    <thead class="thead-dark">
+        <th>ID</th>
+        <th>Email</th>
+        <th>Nome</th>
+        <th>Sobrenome</th>
+        <th>Avatar</th>
+        <th>Açoes</th>
+    </thead>
+    <tbody>
+        <tr ng-repeat="dados in usuarios">
+            <td>{{dados.id}}</td>
+            <td>{{dados.email}}</td>
+            <td>{{dados.first_name}}</td>
+            <td>{{dados.last_name}}</td>
+            <td><img src="{{dados.avatar}}"></td>
+            <td><button class="btn btn-danger" ng-click="remover($index)">Deletar</button></td>
+            <td><a href="/#!/view2" ng-click="editar()" class="btn btn-primary" >Editar</a></td>
+        </tr>
+    </tbody>
+</table>
