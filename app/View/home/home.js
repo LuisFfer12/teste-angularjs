@@ -1,17 +1,16 @@
 'use strict';
 
-angular.module('myApp.view1', ['ngRoute'])
+angular.module('myApp.home', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {
-    templateUrl: 'view1/view1.html',
-    controller: 'View1Ctrl'
+  $routeProvider.when('/home', {
+    templateUrl: 'View/home/home.html',
+    controller: 'HomeCtrl'
   });
 }])
 
-.controller('View1Ctrl', ['$scope','$http',function($scope,$http) {
+.controller('HomeCtrl', ['$scope','$http',function($scope,$http) {
 
-  $scope.luis="luis";
   $scope.usuarios = [];
 
  if(localStorage.getItem('usuarios') == null){
@@ -30,11 +29,9 @@ angular.module('myApp.view1', ['ngRoute'])
      $scope.usuarios = usua;
  }
 
-   
-       $scope.remover = function(index){
-           $scope.usuarios.splice(index,1);
-           localStorage.setItem('usuarios',JSON.stringify($scope.usuarios));
-           //$scope.usuarios = localStorage.getItem('usuarios');
+   $scope.remover = function(index){
+       $scope.usuarios.splice(index,1);
+       localStorage.setItem('usuarios',JSON.stringify($scope.usuarios));
         }
 
 }]);
