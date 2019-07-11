@@ -1,5 +1,5 @@
 <div class="table row">
-<table class="col-md-12 table-striped table-dark table-bordered table">
+<table class="col-md-12 table-striped table-dark table-bordered">
     <a class="btn btn-primary" href="/#!/cadastro">Adicionar nova Pessoa</a>
     <thead class="thead-light">
         <th>ID</th>
@@ -17,7 +17,7 @@
             <td>{{dados.last_name}}</td>
             <td><img src="{{dados.avatar}}"></td>
             <td><button class="btn btn-danger" ng-click="remover($index)">Deletar</button>
-            <a href="/#!/cadastro" ng-click="editar()" class="btn btn-primary" >Editar</a></td>
+            <a href="/#!/cadastro/{{dados.id}}" ng-click="editar()" class="btn btn-primary" >Editar</a></td>
         </tr>
     </tbody>
 </table>

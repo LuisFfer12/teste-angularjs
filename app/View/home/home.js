@@ -11,7 +11,6 @@ angular.module('myApp.home', ['ngRoute'])
 
 .controller('HomeCtrl', ['$scope','$http',function($scope,$http) {
 
-  $scope.luis="luis";
   $scope.usuarios = [];
 
  if(localStorage.getItem('usuarios') == null){
@@ -30,11 +29,9 @@ angular.module('myApp.home', ['ngRoute'])
      $scope.usuarios = usua;
  }
 
-   
-       $scope.remover = function(index){
-           $scope.usuarios.splice(index,1);
-           localStorage.setItem('usuarios',JSON.stringify($scope.usuarios));
-           //$scope.usuarios = localStorage.getItem('usuarios');
+   $scope.remover = function(index){
+       $scope.usuarios.splice(index,1);
+       localStorage.setItem('usuarios',JSON.stringify($scope.usuarios));
         }
 
 }]);

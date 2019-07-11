@@ -9,10 +9,16 @@ angular.module('myApp.cadastro', ['ngRoute'])
   });
 }])
 
+.config(['$routeProvider', function($routeProvider) {
+  $routeProvider.when('/cadastro/:usuarioId', {
+    templateUrl: 'View/cadastro/cadastro.html',
+    controller: 'CadastroCtrl'
+  });
+}])
+
 .controller('CadastroCtrl', ['$scope',function($scope) {
 
   $scope.usuario = [];
-    $scope.usuarioModificar = [];
 
     var usuarios = localStorage.getItem('usuarios');
     var usuarios = JSON.parse(usuarios);
