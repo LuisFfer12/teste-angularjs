@@ -1,15 +1,15 @@
 'use strict';
 
-angular.module('myApp.view2', ['ngRoute'])
+angular.module('myApp.cadastro', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view2', {
-    templateUrl: 'view2/view2.html',
-    controller: 'View2Ctrl'
+  $routeProvider.when('/cadastro', {
+    templateUrl: 'View/cadastro/cadastro.html',
+    controller: 'CadastroCtrl'
   });
 }])
 
-.controller('View2Ctrl', ['$scope',function($scope) {
+.controller('CadastroCtrl', ['$scope',function($scope) {
 
   $scope.usuario = [];
     $scope.usuarioModificar = [];
