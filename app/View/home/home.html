@@ -1,7 +1,7 @@
-<div class="table table-hover">
-<table class="col-md-12">
+<div class="table row">
+<table class="col-md-12 table-striped table-dark table-bordered table">
     <a class="btn btn-primary" href="/#!/view2">Adicionar nova Pessoa</a>
-    <thead>
+    <thead class="thead-light">
         <th>ID</th>
         <th>Email</th>
         <th>Nome</th>
@@ -16,8 +16,8 @@
             <td>{{dados.first_name}}</td>
             <td>{{dados.last_name}}</td>
             <td><img src="{{dados.avatar}}"></td>
-            <td><button class="btn btn-danger" ng-click="remover($index)">Deletar</button></td>
-            <td><a href="/#!/view2" ng-click="editar()" class="btn btn-primary" >Editar</a></td>
+            <td><button class="btn btn-danger" ng-click="remover($index)">Deletar</button>
+            <a href="/#!/view2" ng-click="editar()" class="btn btn-primary" >Editar</a></td>
         </tr>
     </tbody>
 </table>
