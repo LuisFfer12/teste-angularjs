@@ -24,9 +24,7 @@ angular.module('myApp.home', ['ngRoute'])
        });
  }
  else{
-   var usu = localStorage.getItem('usuarios');
-   var usua = JSON.parse(usu);
-     $scope.usuarios = usua;
+     $scope.usuarios = JSON.parse(localStorage.getItem('usuarios'));
  }
 
    $scope.remover = function(index){

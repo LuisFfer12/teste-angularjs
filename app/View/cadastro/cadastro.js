@@ -20,8 +20,7 @@ angular.module('myApp.cadastro', ['ngRoute'])
 
   $scope.usuario = [];
 
-    var usuarios = localStorage.getItem('usuarios');
-    var usuarios = JSON.parse(usuarios);
+  var usuarios = JSON.parse(localStorage.getItem('usuarios'));
           
     $scope.adicionar = function(){
 
