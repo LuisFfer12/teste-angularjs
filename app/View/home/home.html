@@ -17,7 +17,7 @@
             <td>{{dados.last_name}}</td>
             <td><img src="{{dados.avatar}}"></td>
             <td><button class="btn btn-danger" ng-click="remover($index)">Deletar</button>
-            <a href="/#!/cadastro/{{dados.id}}" ng-click="editar()" class="btn btn-primary" >Editar</a></td>
+            <a href="/#!/cadastro/{{dados.id}}" ng-click="editar($index)" class="btn btn-primary" >Editar</a></td>
         </tr>
     </tbody>
 </table>

@@ -9,7 +9,8 @@ angular.module('myApp.home', ['ngRoute'])
   });
 }])
 
-.controller('HomeCtrl', ['$scope','$http',function($scope,$http) {
+
+.controller('HomeCtrl', ['$scope','$http','m',function($scope,$http,m) {
 
   $scope.usuarios = [];
 
@@ -30,6 +31,12 @@ angular.module('myApp.home', ['ngRoute'])
    $scope.remover = function(index){
        $scope.usuarios.splice(index,1);
        localStorage.setItem('usuarios',JSON.stringify($scope.usuarios));
+        }
+
+        $scope.editar = function(index){
+        var teste =  $scope.usuarios.splice(index,1);
+          //console.log(teste);
+          m.setUser(JSON.stringify(teste));
         }
 
 }]);

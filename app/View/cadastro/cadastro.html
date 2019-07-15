@@ -2,7 +2,7 @@
     <h1>Cadastro de Pessoas</h1>
 </div>
 
-<form novalidate name="formulario" class="row" ng-submit="adicionar()">
+<form novalidate name="formulario" class="row" ng-submit="">
         <div class="col-md-8">
             <div class="form-group">
                 <label>Nome</label>
@@ -36,9 +36,12 @@
                     <input name="email" class="form-control" ng-model="usuario.email">
             </div>
     
-            <button type="submit" class="btn btn-primary" ng-disabled="formulario.$invalid" >
+            <button type="submit" class="btn btn-primary" ng-disabled="formulario.$invalid" ng-if ="!isEdit" ng-click= "adicionar()" >
                 Salvar
             </button>
+            <a href="/" type="submit" class="btn btn-primary" ng-disabled="formulario.$invalid" ng-if ="isEdit" ng-click="editar()" >
+                Editar
+            </a>
             <a href="/" meu-focus class="btn btn-primary">Voltar</a>
             <hr>
         </div>
